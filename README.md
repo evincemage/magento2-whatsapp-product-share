@@ -21,7 +21,7 @@ When the user clicks on WhatsApp share button on the product detail page it redi
 WhatsApp share extension for Magento 2 compatible with: 2.1, 2.2 and later version of 2.2 (Community)
 
 ## Installation
-For installation of Magento 2 extension, please this guide.
+For installation of Magento 2 extension, please follow this guide.
 https://evincemage.com/magento2-extension-installation-guilde.pdf
 
 ## Troubleshooting
