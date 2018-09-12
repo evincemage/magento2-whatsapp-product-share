@@ -1,0 +1,26 @@
+<?php
+
+if($block->getFullActionName() == 'catalog_product_view') {
+
+	$product = $block->getProduct();
+
+	if(strlen($block->getCustomShareMessage())>0) {
+
+		$msg = $block->getCustomShareMessage(); 
+
+	} else {
+
+		$msg = __("Hey! Take a look at this awesome product:");
+
+	}
+
+	$display_des = $msg.' '.$product->getName();
+
+	if($block->getButtonPos() == 2 || $block->getButtonPos() == 3) { ?>
+
+		<div id="whats_app_button_footer" style="background-color:<?php echo '#'.$block->getBackcolor();?>; bottom: 0; color: #fff;   padding:8px 0px 0; position: fixed; text-align: center; width: 100%; display:none; z-index:99999; vertical-align: middle">
+			<div>
+				<a href="whatsapp://send" data-text='<?php echo $display_des;?>' class="wa_btn wa_btn_<?php echo $block->getButtonSize(); ?>" style="display:none;"><?php echo __('Share'); ?></a>
+			</div>
+		</div>
+<?php  } } ?>

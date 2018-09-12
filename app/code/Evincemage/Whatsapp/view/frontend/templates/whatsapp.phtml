@@ -1,0 +1,22 @@
+<?php 
+
+$product = $block->getProduct();
+	
+if(strlen($block->getCustomShareMessage()) > 0){
+	
+		$msg = $block->getCustomShareMessage();
+	
+} else {
+	
+		$msg = __("Hey! Take a look at this awesome product:");
+	
+}
+	
+$display_des = $msg.' '.$product->getName();
+	
+if($block->getButtonPos() == 1 || $block->getButtonPos() == 3) { ?>
+	
+		<a href="whatsapp://send" data-text='<?php echo $display_des;?>' class="wa_btn wa_btn_<?php echo $block->getButtonSize(); ?>" style="display:none;"><?php echo __('Share'); ?>
+		</a>
+	
+<?php } ?>

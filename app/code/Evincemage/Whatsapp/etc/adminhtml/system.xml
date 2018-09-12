@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <tab id="evincemage" translate="label" sortOrder="10">
+            <label>Evincemage</label>
+        </tab>
+        <section id="whatsapp" translate="label" type="text" sortOrder="1000" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Whatsapp Share</label>
+            <tab>evincemage</tab>
+            <resource>Evincemage_Whatsapp::config</resource>
+            <group id="active_display" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="custom_message" translate="label comment" sortOrder="2" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Set Your Custom Share Message</label>
+                </field>
+                <field id="button_size" translate="label comment" sortOrder="3" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Button Size</label>
+                    <source_model>Evincemage\Whatsapp\Model\Config\Source\Size</source_model>
+               </field>
+                <field id="button_position" translate="label comment" sortOrder="4" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                     <label>Select Button Position</label>
+                     <source_model>Evincemage\Whatsapp\Model\Config\Source\Position</source_model>
+               </field>
+                <field id="bg_color" translate="label comment" sortOrder="5" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Background Color</label>
+                    <validate>color</validate>
+                    <comment>e.g "000000" (It will be display when you select position "Footer Section")</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
